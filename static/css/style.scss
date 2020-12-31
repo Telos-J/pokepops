@@ -9,8 +9,23 @@
 body {
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+
+    #header-logo {
+        margin-left: 3.125rem;
+        height: 5.06rem;
+    }
+    
+    #header-shopping-bag {
+        margin: 3.125rem;
+        height: 3.4375rem;
+    }
 }
 
 .wrapper {
