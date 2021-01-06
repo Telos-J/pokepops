@@ -1,3 +1,7 @@
+@import 'header';
+@import 'footer';
+@import 'home';
+
 *,
 *::after,
 *::before {
@@ -10,30 +14,9 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-header {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-
-    #header-logo {
-        margin-left: 3.125rem;
-        height: 5.06rem;
-    }
-    
-    #header-shopping-bag {
-        margin: 3.125rem;
-        height: 3.4375rem;
-    }
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    #construction-message {
-        width: 45rem;
-    }
+main {
+    margin: 2rem;
 }
