@@ -1,0 +1,16 @@
+.home-container {
+    display: grid;
+    grid-template-columns: calc(50vw - 2.5rem) calc(50vw - 2.5rem);
+    grid-template-rows: calc(50vh - 5rem) calc(50vh - 5rem);
+    
+    .home-container-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem;
+        font-family: roboto;
+        font-size: 3rem;
+        font-weight: 100;
+        border: 1px dotted black;
+    }
+}
