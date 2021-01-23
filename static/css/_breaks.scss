@@ -1,0 +1,82 @@
+.break-container {
+    display: flex;
+    
+    .break-image {
+        display: flex;
+        justify-content: center;
+        width: 60vw;
+    }
+    
+    .break-detail {
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        font-family: roboto;
+        font-weight: 100;
+        font-size: 2rem;
+        padding: 0.2rem 2rem;
+        
+        .break-type {
+            font-size: 1.125rem;
+        }
+        
+        .break-slots {
+            display: flex;
+            justify-content: space-between;
+            padding: 3rem 0 2rem 0;
+
+            .break-slot {
+                width: 3rem;
+
+                .speech-message {
+                    position: absolute;
+                    display: flex;
+                    width: 3rem;
+                    height: 1.5rem;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    font-size: 0.5rem;
+                    font-weight: 600;
+                }
+                
+                .speech-bubble {
+                    position: absolute;
+                    width: 3rem;
+                    transform: translate(-2.5rem, -2rem) scale(0);
+                    transform-origin: 2.5rem 1.5rem;
+                }
+                
+                .pokeball {
+                    cursor: pointer;
+                }
+            }
+            
+            .pokeball-closed {
+                display: none;
+            }
+        }
+        
+        .break-buy-button {
+            background-color:#e4685d;
+            border-radius:4px;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            margin-top: 2rem;
+            padding: 1rem 0;
+            font-size: 1rem;
+            text-decoration:none;
+            text-align: center;
+        }
+
+        .break-buy-button:hover {
+            background-color:#eb675e;
+        }
+
+        .break-buy-button:active {
+            position:relative;
+            top:1px;
+        }
+    }
+}

@@ -40,6 +40,7 @@ header .header-right-container .header-nav-container .header-nav-item {
 header .header-right-container .header-nav-container .header-nav-item a {
   font-family: roboto;
   font-weight: 300;
+  font-size: 1rem;
   color: black;
   text-decoration: none;
 }
@@ -68,6 +69,7 @@ header .header-right-container .header-icon-container .header-icon-item + .heade
 footer {
   margin: 2rem;
   font-family: roboto;
+  font-weight: 300;
 }
 
 .home-container {
@@ -94,6 +96,112 @@ footer {
   font-size: 3rem;
   font-weight: 100;
   border: 1px dotted black;
+}
+
+.break-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.break-container .break-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60vw;
+}
+
+.break-container .break-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40vw;
+  font-family: roboto;
+  font-weight: 100;
+  font-size: 2rem;
+  padding: 0.2rem 2rem;
+}
+
+.break-container .break-detail .break-type {
+  font-size: 1.125rem;
+}
+
+.break-container .break-detail .break-slots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3rem 0 2rem 0;
+}
+
+.break-container .break-detail .break-slots .break-slot {
+  width: 3rem;
+}
+
+.break-container .break-detail .break-slots .break-slot .speech-message {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 3rem;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 0.5rem;
+  font-weight: 600;
+}
+
+.break-container .break-detail .break-slots .break-slot .speech-bubble {
+  position: absolute;
+  width: 3rem;
+  -webkit-transform: translate(-2.5rem, -2rem) scale(0);
+          transform: translate(-2.5rem, -2rem) scale(0);
+  -webkit-transform-origin: 2.5rem 1.5rem;
+          transform-origin: 2.5rem 1.5rem;
+}
+
+.break-container .break-detail .break-slots .break-slot .pokeball {
+  cursor: pointer;
+}
+
+.break-container .break-detail .break-slots .pokeball-closed {
+  display: none;
+}
+
+.break-container .break-detail .break-buy-button {
+  background-color: #e4685d;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.break-container .break-detail .break-buy-button:hover {
+  background-color: #eb675e;
+}
+
+.break-container .break-detail .break-buy-button:active {
+  position: relative;
+  top: 1px;
 }
 
 *,
