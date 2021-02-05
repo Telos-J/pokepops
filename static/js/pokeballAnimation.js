@@ -9,7 +9,7 @@ gsap.registerPlugin(MorphSVGPlugin);
 for (const pokeball of pokeballs) {
     pokeball.open = true
     pokeball.addEventListener('click', (e) => {
-        const slot = e.target.closest('.break-slot')
+        const slot = e.target.closest('.slot-item-slot')
         const ball = slot.querySelector('.pokeball');
         const paths = Array.from(ball.querySelectorAll('path'))
         

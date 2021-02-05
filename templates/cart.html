@@ -1,0 +1,26 @@
+{% load static %}
+
+<div class="drawer">
+    <div class="drawer-header">
+        <div class="close-button">
+            <svg viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="25" height="25" fill="#F44336"/>
+            <path d="M18.4715 16.8806C18.9113 17.3206 18.9113 18.0327 18.4715 18.4714C18.2521 18.6908 17.9641 18.801 17.6759 18.801C17.388 18.801 17.1 18.6908 16.8806 18.4714L13.5 15.0907L10.1195 18.4714C9.90008 18.6908 9.6121 18.801 9.32413 18.801C9.03594 18.801 8.74796 18.6908 8.52858 18.4714C8.08878 18.0327 8.08878 17.3206 8.52858 16.8806L11.9093 13.5L8.52858 10.1194C8.08878 9.67943 8.08878 8.96731 8.52858 8.52855C8.96858 8.08875 9.67946 8.08875 10.1195 8.52855L13.5 11.9093L16.8806 8.52855C17.3206 8.08875 18.0315 8.08875 18.4715 8.52855C18.9113 8.96731 18.9113 9.67943 18.4715 10.1194L15.0907 13.5L18.4715 16.8806Z" fill="#FAFAFA"/>
+            </svg>
+        </div>
+    </div>
+    
+    <div class="drawer-inner">
+        <p class="drawer-message">Your cart is currently empty.</p>
+    </div>
+    
+    <div class="drawer-footer">
+        <div class="cart-detail-container">
+            <div class="cart-detail-title">Subtotal</div>
+            <div class="cart-detail-info">$0</div>
+        </div>
+        <div class="primary-button black-button" id="checkout-button">Checkout</div>
+    </div>
+</div>
+
+<script src="{% static 'js/drawerAnimation.js' %}"></script>

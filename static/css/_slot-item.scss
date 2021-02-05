@@ -1,13 +1,13 @@
-.break-container {
+.slot-item-container {
     display: flex;
     
-    .break-image {
+    .slot-item-image {
         display: flex;
         justify-content: center;
         width: 60vw;
     }
     
-    .break-detail {
+    .slot-item-detail {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -17,16 +17,16 @@
         font-size: 2rem;
         padding: 0.2rem 2rem;
         
-        .break-type {
+        .slot-item-type {
             font-size: 1.125rem;
         }
         
-        .break-slots {
+        .slot-item-slots {
             display: flex;
             justify-content: space-between;
             padding-top: 2rem;
 
-            .break-slot {
+            .slot-item-slot {
                 width: 3rem;
 
                 .speech-message {
@@ -59,7 +59,7 @@
             }
         }
         
-        .break-buy-button {
+        .slot-item-buy-button {
             cursor: pointer;
             border: 4px solid #2c2c2c;
             background-color: #FF3D00;
@@ -73,7 +73,7 @@
             padding: 1rem 0;
         }
 
-        .break-buy-button:active {
+        .slot-item-buy-button:active {
             transform: translate(4px, 4px);
             box-shadow: 1px 1px 0 0 #2c2c2c;
         }

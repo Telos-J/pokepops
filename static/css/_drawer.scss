@@ -1,0 +1,59 @@
+.drawer {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: -500px;
+    width: 500px;
+    height: 100vh;
+    background-color: #2c2c2c;
+    padding: 0 20px 20px;
+    transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+    &.is-open {
+        transform: translateX(-500px);
+    }
+    
+    .drawer-header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 80px;
+        
+        .close-button {
+            cursor: pointer;
+            position: relative;
+            padding: 20px;
+            right: -20px;
+            width: 80px;
+            height: 80px;
+        }
+
+    }
+    
+    .drawer-inner {
+        position: absolute;
+        top: 80px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0 40px;
+        
+        .drawer-message {
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+    }
+    
+    .drawer-footer {
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        right: 20px;
+        min-height: 130px;
+        padding: 0 20px 40px 20px;
+    }
+}

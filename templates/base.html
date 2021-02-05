@@ -13,15 +13,18 @@
 </head>
 
 <body>
-    <div class="container">
+    <div id="container">
         {% include 'header.html' %}
+
         <main>
             {% block main %}
             {% endblock  %}
         </main>
+
+        {% include 'footer.html' %}
     </div>
 
-    {% include 'footer.html' %}
+    {% include 'cart.html' %}
 </body>
 
 

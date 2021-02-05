@@ -1,7 +1,9 @@
 @import 'header';
 @import 'footer';
 @import 'home';
-@import 'breaks';
+@import 'slot-item';
+@import 'drawer';
+@import 'cart';
 
 *,
 *::after,
@@ -18,6 +20,57 @@ body {
     justify-content: space-between;
 }
 
+#container {
+    filter: opacity(1);
+    transition: filter 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &.deactivate {
+        filter: opacity(0.5);
+        overflow: hidden;
+        
+        & * {
+            pointer-events: none;
+        }
+    }
+}
+
 main {
     margin: 2rem;
+}
+
+.primary-button {
+    cursor: pointer;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    font-style: italic;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.05s, box-shadow 0.05s;
+    padding: 1rem 0;
+    
+    &:active {
+        transform: translate(4px, 4px);
+    }
+    
+    &.red-button {
+        border: 4px solid #2c2c2c;
+        background-color: #FF3D00;
+        box-shadow: 5px 5px 0 0 #2c2c2c;
+        color:#ffffff;
+
+        &:active {
+            box-shadow: 1px 1px 0 0 #2c2c2c;;
+        }
+    }
+
+    &.black-button {
+        border: 4px solid #ffffff;
+        background-color: #000000;
+        box-shadow: 5px 5px 0 0 #ffffff;
+        color:#ffffff;
+
+        &:active {
+            box-shadow: 1px 1px 0 0 #ffffff;;
+        }
+    }
 }
