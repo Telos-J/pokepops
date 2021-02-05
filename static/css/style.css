@@ -38,8 +38,8 @@ header .header-right-container .header-nav-container .header-nav-item {
 }
 
 header .header-right-container .header-nav-container .header-nav-item a {
-  font-family: roboto;
-  font-weight: 300;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
   font-size: 1rem;
   color: black;
   text-decoration: none;
@@ -68,8 +68,9 @@ header .header-right-container .header-icon-container .header-icon-item + .heade
 
 footer {
   margin: 2rem;
-  font-family: roboto;
-  font-weight: 300;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  color: #fff;
 }
 
 .home-container {
@@ -122,9 +123,12 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 40vw;
-  font-family: roboto;
-  font-weight: 100;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
   font-size: 2rem;
   padding: 0.2rem 2rem;
 }
@@ -140,7 +144,7 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 3rem 0 2rem 0;
+  padding-top: 2rem;
 }
 
 .break-container .break-detail .break-slots .break-slot {
@@ -163,6 +167,7 @@ footer {
   text-align: center;
   font-size: 0.5rem;
   font-weight: 600;
+  font-style: italic;
 }
 
 .break-container .break-detail .break-slots .break-slot .speech-bubble {
@@ -178,30 +183,33 @@ footer {
   cursor: pointer;
 }
 
-.break-container .break-detail .break-slots .pokeball-closed {
+.break-container .break-detail .break-slots .pokeball-open, .break-container .break-detail .break-slots .pokeball-closed {
   display: none;
 }
 
 .break-container .break-detail .break-buy-button {
-  background-color: #e4685d;
-  border-radius: 4px;
-  display: inline-block;
   cursor: pointer;
+  border: 4px solid #2c2c2c;
+  background-color: #FF3D00;
+  -webkit-box-shadow: 5px 5px 0 0 #2c2c2c;
+          box-shadow: 5px 5px 0 0 #2c2c2c;
   color: #ffffff;
-  margin-top: 2rem;
-  padding: 1rem 0;
   font-size: 1rem;
+  font-style: italic;
   text-decoration: none;
   text-align: center;
-}
-
-.break-container .break-detail .break-buy-button:hover {
-  background-color: #eb675e;
+  -webkit-transition: -webkit-transform 0.05s, -webkit-box-shadow 0.05s;
+  transition: -webkit-transform 0.05s, -webkit-box-shadow 0.05s;
+  transition: transform 0.05s, box-shadow 0.05s;
+  transition: transform 0.05s, box-shadow 0.05s, -webkit-transform 0.05s, -webkit-box-shadow 0.05s;
+  padding: 1rem 0;
 }
 
 .break-container .break-detail .break-buy-button:active {
-  position: relative;
-  top: 1px;
+  -webkit-transform: translate(4px, 4px);
+          transform: translate(4px, 4px);
+  -webkit-box-shadow: 1px 1px 0 0 #2c2c2c;
+          box-shadow: 1px 1px 0 0 #2c2c2c;
 }
 
 *,
