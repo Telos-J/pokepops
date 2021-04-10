@@ -2,10 +2,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 6rem;
 
-    #header-logo {
-        margin-left: 2rem;
-        height: 3.375rem;
+    .header-left-container {
+        display: flex;
+        align-items: center;
+        height: 6rem;
+
+        #header-logo {
+            margin-left: 2rem;
+            height: 3.375rem;
+        }
     }
     
     .header-right-container {

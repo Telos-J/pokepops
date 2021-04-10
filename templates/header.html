@@ -1,14 +1,16 @@
 {% load static %}
 
 <header>
-    <a href="{% url 'core:home' %}"><img id="header-logo" src="{% static 'img/logo.png' %}" alt="logo"></a>
+    <div class="header-left-container">
+        <a href="{% url 'core:home' %}"><img id="header-logo" src="{% static 'img/logo.png' %}" alt="logo"></a>
+    </div>
     
     <div class="header-right-container">
         <div class="header-nav-container">
             <div class="header-nav-item"><a href="{% url 'breaks:breaks' %}">Breaks</a></div>
             <div class="header-nav-item"><a href="">Single Packs</a></div>
             <div class="header-nav-item"><a href="">Single Cards</a></div>
-            <div class="header-nav-item"><a href="">Raffels</a></div>
+            <div class="header-nav-item"><a href="{% url 'raffles:raffles' %}">Raffels</a></div>
         </div>
 
         <div class="header-icon-container">
