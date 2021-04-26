@@ -33,10 +33,17 @@
     .drawer-inner {
         position: absolute;
         top: 80px;
-        bottom: 0;
+        bottom: calc(7.5rem + 100px);
         left: 0;
         right: 0;
         padding: 0 40px;
+        overflow: hidden scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+
+        &::-webkit-scrollbar {
+            display: none; /* Chrome, Safari and Opera */
+        }
         
         .drawer-message {
             font-family: "Josefin Sans", sans-serif;
@@ -45,6 +52,58 @@
             color: white;
             text-align: center;
             padding: 2rem 0;
+        }
+
+        .drawer-item {
+            display: grid;
+            width: 100%;
+            height: 200px;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 40% 40% 20%;
+            grid-template-areas:
+                "image name"
+                "image price"
+                "image quantity";
+            margin: 20px 0;
+            color: white;
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: 400;
+            text-align: center;
+
+            .drawer-item-remove {
+                display: flex;
+                position: absolute;
+                cursor: pointer;
+                width: 80px;
+                height: 25px;
+                background-color: black;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .drawer-item-image {
+                grid-area: image;
+                background-color: white;
+                padding: 10px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .drawer-item-name {
+                grid-area: name;
+                font-size: 1.4rem;
+            }
+            .drawer-item-price {
+                grid-area: price;
+                font-size: 1.8rem;
+            }
+            .drawer-item-quantity {
+                grid-area: quantity;
+                font-size: 1.4rem;
+            }
         }
     }
     
