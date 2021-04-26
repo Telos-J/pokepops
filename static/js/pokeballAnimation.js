@@ -1,8 +1,11 @@
 const pokeballs = Array.from(document.querySelectorAll('.pokeball'));
-const pokeballOpen = Array.from(document.querySelector('.pokeball-open').children)
+const pokeballOpen = Array.from(document.querySelector('.pokeball-open').children);
 const pokeballClosed = Array.from(document.querySelector('.pokeball-closed').children);
-const speechMessages = Array.from(document.querySelectorAll('.speech-message'))
-const speechBubbles = Array.from(document.querySelectorAll('.speech-bubble'))
+const speechMessages = Array.from(document.querySelectorAll('.speech-message'));
+const speechBubbles = Array.from(document.querySelectorAll('.speech-bubble'));
+const toggleContainter = document.querySelector('.slot-item-toggle');
+const toggles = Array.from(document.querySelectorAll('.slot-item-toggle > .toggle'));
+const slotSets = Array.from(document.querySelectorAll('.slot-set'))
 
 gsap.registerPlugin(MorphSVGPlugin);
 
@@ -37,6 +40,17 @@ for (const pokeball of pokeballs) {
         ball.open = !ball.open;
     })
 }
+
+toggles.forEach((toggle, idx) => {
+    toggle.addEventListener('click', () => {
+        if (!toggle.classList.contains('selected')) {
+            toggleContainter.querySelector('.selected').classList.remove('selected');
+            toggle.classList.add('selected');
+
+            for (const slotSet of slotSets) gsap.to(slotSet, { transform: `translateX(-${34 * idx}rem)` })
+        }
+    })
+})
 
 // gsap.to(speechMessages, {transform: 'translate(-2.5rem, -1.55rem) scale(1)', delay: 1})
 gsap.to(speechBubbles, { transform: 'translate(-2.5rem, -2rem) scale(1)', delay: 1 })
