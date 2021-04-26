@@ -22,7 +22,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 
 DEBUG = env.bool("DEBUG", default=False)
 
-ALLOWED_HOSTS = ["pokepop.herokuapp.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["pokepops.herokuapp.com", "localhost", "127.0.0.1"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
