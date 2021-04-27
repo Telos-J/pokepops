@@ -1,6 +1,6 @@
 .home-container {
     display: grid;
-    grid-template-columns: calc(50vw - 2.5rem) calc(50vw - 2.5rem);
+    grid-template-columns: calc(50vw) calc(50vw);
     grid-template-rows: calc(50vh - 5rem) calc(50vh - 5rem);
     
     .home-container-item {
