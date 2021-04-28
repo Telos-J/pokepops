@@ -240,6 +240,10 @@ footer {
   text-align: center;
   padding: 2rem 0;
 }
+.drawer .drawer-inner .drawer-message.loading {
+  font-style: italic;
+  animation: grey-blink 0.2s alternate infinite;
+}
 .drawer .drawer-inner .drawer-item {
   display: grid;
   width: 100%;
@@ -257,11 +261,14 @@ footer {
   display: flex;
   position: absolute;
   cursor: pointer;
-  width: 80px;
+  width: 90px;
   height: 25px;
   background-color: black;
   justify-content: center;
   align-items: center;
+}
+.drawer .drawer-inner .drawer-item .drawer-item-remove.loading {
+  animation: black-blink 0.2s alternate infinite;
 }
 .drawer .drawer-inner .drawer-item .drawer-item-image {
   grid-area: image;
@@ -293,6 +300,9 @@ footer {
   min-height: 130px;
   padding: 0 20px 40px 20px;
 }
+.drawer .drawer-footer #checkout-button.loading {
+  animation: black-blink 0.2s alternate infinite;
+}
 
 .cart-detail-container {
   display: flex;
@@ -304,6 +314,55 @@ footer {
   text-decoration: none;
   padding: 3rem 0;
   border-top: 3px solid white;
+}
+
+.account-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Josefin Sans", sans-serif;
+  color: #2c2c2c;
+}
+.account-container .errorlist {
+  list-style-type: none;
+  color: #ff2d00;
+}
+.account-container h1 {
+  font-weight: 400;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.account-container p label, .account-container p input#id_remember {
+  display: none;
+}
+.account-container p input:not(#id_remember) {
+  width: 100%;
+  border: 4px solid #2c2c2c;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+.account-container .primaryAction > button {
+  width: 100%;
+  min-width: 20rem;
+  margin-top: 2rem;
+}
+.account-container .secondaryAction {
+  display: flex;
+  width: 100%;
+  margin-top: 0.5rem;
+  justify-content: space-between;
+}
+.account-container .secondaryAction .button {
+  text-decoration: none;
+  color: #2c2c2c;
+}
+.account-container .secondaryAction .button:hover {
+  text-decoration: underline;
 }
 
 *,
@@ -353,12 +412,15 @@ body {
 }
 .primary-button.red-button {
   border: 4px solid #2c2c2c;
-  background-color: #FF3D00;
+  background-color: #ff3d00;
   box-shadow: 5px 5px 0 0 #2c2c2c;
   color: #ffffff;
 }
 .primary-button.red-button:active {
   box-shadow: 1px 1px 0 0 #2c2c2c;
+}
+.primary-button.red-button.loading {
+  animation: red-blink 0.2s alternate infinite;
 }
 .primary-button.black-button {
   border: 4px solid #ffffff;
@@ -368,6 +430,31 @@ body {
 }
 .primary-button.black-button:active {
   box-shadow: 1px 1px 0 0 #ffffff;
+}
+
+@keyframes red-blink {
+  0% {
+    color: #ffffff;
+  }
+  100% {
+    color: #ff3d00;
+  }
+}
+@keyframes black-blink {
+  0% {
+    color: #ffffff;
+  }
+  100% {
+    color: #000000;
+  }
+}
+@keyframes grey-blink {
+  0% {
+    color: #ffffff;
+  }
+  100% {
+    color: #2c2c2c;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

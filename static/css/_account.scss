@@ -1,0 +1,58 @@
+.account-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Josefin Sans", sans-serif;
+    color: #2c2c2c;
+
+    .errorlist {
+        list-style-type: none;
+        color: #ff2d00;
+    }
+
+    h1 {
+        font-weight: 400;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+    
+    p {
+        label, input#id_remember {
+            display: none;
+        }
+
+        input:not(#id_remember) {
+            width: 100%;
+            border: 4px solid #2c2c2c;
+            font-size: 2rem;
+            line-height: 2rem;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+        }
+    }
+
+    .primaryAction > button {
+        width: 100%;
+        min-width: 20rem;
+        margin-top: 2rem;
+    }
+
+    .secondaryAction {
+        display: flex;
+        width: 100%;
+        margin-top: 0.5rem;
+        justify-content: space-between;
+
+        .button {
+            text-decoration: none;
+            color: #2c2c2c;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,31 +1,26 @@
-const button = document.querySelector('#add-to-cart') 
+const button = document.querySelector('#add-to-cart')
 const slots = document.querySelectorAll('.slot')
 
-button.addEventListener('click', () => {
+button.addEventListener('click', async () => {
     let indexes = []
     for (let slot of slots) {
-        if (slot.hasAttribute('data-selected')) 
+        if (slot.hasAttribute('data-selected'))
             indexes.push(slot.getAttribute('data-index'))
     }
 
+    // If slots are selected
     if (indexes.length) {
-        const url =  "add-to-cart/"
-        const data = JSON.stringify({
+        button.innerHTML = 'Loading';
+        button.classList.add('loading');
+        const data = {
             item: button.getAttribute('data-item'),
             indexes: indexes
-        })
-
-
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", url, true);
-        xhr.setRequestHeader('X-CSRFToken', csrftoken);
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.onreadystatechange = function () {
-            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-                console.log(JSON.parse(this.responseText))
-                getCart()
-            }
         }
-        xhr.send(data);
+
+        await postData("add-to-cart/", data)
+        await getCart()
+        button.innerHTML = 'Add To Cart';
+        button.classList.remove('loading');
+        openDrawer()
     }
 })

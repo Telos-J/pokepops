@@ -1,0 +1,21 @@
+{% extends 'account/custom_base.html' %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block main %}
+
+<h1>{% trans "SIGN UP" %}</h1>
+
+<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% endif %}
+    <div class="primaryAction">
+        <button class="primary-button red-button" type="submit">{% trans "Sign Up" %} &raquo;</button>
+    </div>
+</form>
+
+{% endblock main %}

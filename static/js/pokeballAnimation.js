@@ -16,10 +16,8 @@ function openClose(pokeball, open) {
 
     // Pokeball Animation
     paths.map((item, idx) => {
-        if (idx == 5)
+        if (idx === 5)
             shapeIndex = 0;
-        else if (idx == 6 && !pokeball.open)
-            shapeIndex = 1;
         else
             shapeIndex = "auto";
         gsap.to(item, {
@@ -28,15 +26,21 @@ function openClose(pokeball, open) {
                 shapeIndex: shapeIndex
             }
         });
+
+        if (idx === 9) {
+            if (open) gsap.to(item, { fill: "#37474F" })
+            else gsap.to(item, { fill: "#FF3D00" })
+        }
     })
 
     // Speech Bubble Animation
-    gsap.to(slot.querySelector('.speech-bubble'), {
-        transform: open ? 'translate(-2.5rem, -2rem) scale(1)' : 'translate(-2.5rem, -1.55rem) scale(0)'
-    })
-
+    // gsap.to(slot.querySelector('.speech-bubble'), {
+    //     transform: open ? 'translate(-2.5rem, -2rem) scale(1)' : 'translate(-2.5rem, -1.55rem) scale(0)'
+    // })
 }
 
+
+// Initialize pokeballs
 for (const pokeball of pokeballs) {
     pokeball.open = false;
     const slot = pokeball.closest('.slot')
@@ -53,6 +57,8 @@ for (const pokeball of pokeballs) {
     }
 }
 
+
+// Initialize speach bubbles
 for (let speechBubble of speechBubbles) {
     if (speechBubble.closest('.slot').hasAttribute('data-available'))
         gsap.to(speechBubble, { transform: 'translate(-2.5rem, -2rem) scale(1)', delay: 1 })

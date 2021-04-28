@@ -11,7 +11,7 @@
     </div>
     
     <div class="drawer-inner">
-        <p class="drawer-message">Your cart is currently empty.</p>
+        <p class="drawer-message">loading</p>
         <div class="drawer-items">
         </div>
     </div>
@@ -19,13 +19,14 @@
     <div class="drawer-footer">
         <div class="cart-detail-container">
             <div class="cart-detail-title">Subtotal</div>
-            <div class="cart-detail-info">$0</div>
+            <div id="total" class="cart-detail-info">$0</div>
         </div>
         <div class="primary-button black-button" id="checkout-button">Checkout</div>
+        <div id="paypal-button-container"></div>
     </div>
 </div>
 
+<script src="https://www.paypal.com/sdk/js?client-id=ATSG5Sx4Le8A6DafxH0PCOLaUMVjkIMd9yn2geJJC7ghp0CPPJ6F94KNabYVcwRqfNUqBO33lLybd16N&currency=USD&disable-funding=credit,card" data-sdk-integration-source="button-factory"></script>
 <script src="{% static 'js/drawerAnimation.js' %}"></script>
-<script src="{% static 'js/csrfcookie.js' %}"></script>
 <script src="{% static 'js/getCart.js' %}"></script>
-
+<script src="{% static 'js/checkout.js' %}"></script>
